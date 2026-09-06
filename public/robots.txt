@@ -1,0 +1,11 @@
+﻿# Allow all bots to crawl
+User-agent: *
+Allow: /
+
+# Disallow admin and dashboard pages
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://luxury-estate.com/sitemap.xml

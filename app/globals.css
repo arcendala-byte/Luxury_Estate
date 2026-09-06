@@ -1,0 +1,87 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-charcoal overflow-x-hidden font-light antialiased;
+  }
+
+  ::selection {
+    background: rgba(201, 162, 39, 0.2);
+    color: #111111;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C9A227;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 162, 39, 0.8);
+  }
+}
+
+@layer components {
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+
+  .heading-display {
+    @apply font-serif font-light leading-[0.9] tracking-tight;
+  }
+
+  .heading-display-bold {
+    @apply font-serif font-bold leading-[0.9] tracking-tight;
+  }
+
+  .label-overline {
+    @apply text-[10px] tracking-[0.3em] uppercase font-sans font-medium;
+  }
+
+  .body-editorial {
+    @apply font-light leading-relaxed text-gray-500;
+  }
+
+  .border-luxury {
+    @apply border border-gray-100;
+  }
+
+  .border-luxury-gold {
+    @apply border border-[#C9A227]/20 hover:border-[#C9A227]/40 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: #C9A227;
+  }
+
+  .bg-gold-light {
+    background: rgba(201, 162, 39, 0.05);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
